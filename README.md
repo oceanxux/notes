@@ -88,7 +88,11 @@ https://ghproxy.com/https://raw.githubusercontent.com/flyqie/dd-shell/master/Cor
 
 
 宝塔面板&AApanel
-
+一键命令
+国外VPS
+wget https://raw.githubusercontent.com/AaronYES/aaPanel/main/script/aapanel.sh  -O aapanel.sh && chmod +x aapanel.sh && clear && ./aapanel.sh
+国内VPS
+wget https://ghproxy.com/https://raw.githubusercontent.com/AaronYES/aaPanel/main/script/aapanel.sh  -O aapanel.sh && chmod +x aapanel.sh && cle
 Debian系统
 
 # 宝塔
