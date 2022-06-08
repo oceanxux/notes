@@ -18,7 +18,7 @@ PS：自定义密码直接 -p 你想要的密码就行！！！
 · 甲骨文、三毛、Vir、RN等大部分VPS通用，三毛、甲骨文 记得去掉 -firmware
 
 bash <(wget --no-check-certificate -qO- 'https://moeclub.org/attachment/LinuxShell/InstallNET.sh') -d 11 -v 64 -a -firmware -p 自定义密码
-复制代码
+
 
 PS:如果你是腾讯云记得卸载组件 否则会导致报错 DD失败
 
@@ -30,12 +30,11 @@ rm -fr /usr/local/qcloud
 ps -A | grep agent
 # 检查看是否还有腾讯云组件
 # kill 这个进程
-复制代码
 
 · 国内VPS需要更换镜像源否则很慢！我这里使用的华为源，如果你是腾讯云后面可以换成内网源，节省流量，下面有写！
 
 bash <(wget --no-check-certificate -qO- 'https://moeclub.org/attachment/LinuxShell/InstallNET.sh') -d 11 -v 64 -a --mirror 'https://mirrors.huaweicloud.com/debian/' -p 自定义密码
-复制代码
+
 
 镜像站地址
 官方给出的地址列表：https://www.debian.org/mirror/list
@@ -66,13 +65,12 @@ http://mirrors.tencentyun.com/
 --mirror 'https://mirrors.aliyun.com/debian/'
 华为源
 --mirror 'https://mirrors.huaweicloud.com/debian/'
-复制代码
+
 
 
 · DD windows
 
 wget --no-check-certificate -qO InstallNET.sh 'https://moeclub.org/attachment/LinuxShell/InstallNET.sh' && bash InstallNET.sh -dd 'http://d.nat.ee/win/lite/win7-ent-sp1-x64-cn/win7-ent-sp1-x64-cn.vhd.gz'
-复制代码
 
 后面的链接为windows系统直链 可以去 dd.nat.ee 下载 
 
@@ -80,12 +78,12 @@ wget --no-check-certificate -qO InstallNET.sh 'https://moeclub.org/attachment/Li
 · 带 WebUI 可查看进度的
 
 https://raw.githubusercontent.com/flyqie/dd-shell/master/Core_Install.sh
-复制代码
+
 
 国内机可使用
 
 https://ghproxy.com/https://raw.githubusercontent.com/flyqie/dd-shell/master/Core_Install.sh
-复制代码
+
 
 
 
@@ -98,7 +96,7 @@ wget -O install.sh http://download.bt.cn/install/install-ubuntu_6.0.sh && bash i
 
 # aapanel
 wget -O install.sh http://www.aapanel.com/script/install-ubuntu_6.0_en.sh && bash install.sh
-复制代码
+
 
 
 有次无聊看了看文件发现aapanel就是宝塔的换皮，语言换成了英语，所以破解方法一样。
@@ -119,7 +117,7 @@ soft['endtime'] = 0
 编辑 /www/server/panel/data/plugin.json
 搜索 "pro": 把后面的-1 改为0 即可
 编辑完毕后保存重启面板即可
-复制代码
+
 
 
 常用脚本
@@ -131,25 +129,24 @@ echo "net.ipv4.tcp_congestion_control=bbr" >> /etc/sysctl.conf
 sysctl -p
 sysctl net.ipv4.tcp_available_congestion_control
 lsmod | grep bbr
-复制代码
+
 
 
 superbench
 
 wget -qO- git.io/superbench.sh | bash
-复制代码
+
 
 
 Bench.sh
 
 wget -qO- bench.sh | bash
-复制代码
 
 
 三网测速
 
 bash <(curl -Lso- http://yun.789888.xyz/speedtest.sh)
-复制代码
+
 
 
 流媒体
@@ -162,7 +159,6 @@ bash <(curl -sSL "https://github.com/CoiaPrant/MediaUnlock_Test/raw/main/check.s
 
 # 第三个(和第一个一样)
 bash <(curl -L -s check.unlock.media)
-复制代码
 
 
 回程
@@ -176,25 +172,24 @@ wget -qO- git.io/besttrace | bash
 
 # 第三个
 curl http://tutu.ovh/bash/returnroute/test.sh | bash
-复制代码
 
 
 yabs 机器跑分
 
 curl -sL yabs.sh | bash
-复制代码
+
 
 
 一件安装docker
 国外机
 
 curl -sSL https://get.docker.com/ | sh
-复制代码
+
 
 国内机
 
 curl -sSL https://get.daocloud.io/docker | sh
-复制代码
+
 
 卸载docker
 
@@ -207,10 +202,10 @@ rm -fr /var/lib/docker/
 
 sudo curl -L "https://github.com/docker/compose/releases/download/1.24.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
-复制代码
+
 
 国内机
 
 curl -L https://get.daocloud.io/docker/compose/releases/download/v2.1.1/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
 chmod +x /usr/local/bin/docker-compose
-复制代码
+
