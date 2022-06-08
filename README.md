@@ -1,16 +1,29 @@
 网络重装脚本
+
+
 PS：自定义密码直接 -p 你想要的密码就行！！！
+
+
 部分机器需要设置网卡，否则可以VNC，但是不能远程SSH
 
 -firmware                额外的驱动支持
+
 -d                        Debian系统 后面是系统版本号
+
 -c                        Centos系统 后面是系统版本号
+
 -v                         后面写64位 32位
+
 -a                        不清楚这个干啥的但是每个脚本都带
+
 --mirror                后面是镜像源地址
+
 -p                        后面写自定义密码
+
 –ip-addr                 ifconfig -a 后获取到的 例：194.87.xxx.xxx
+
 –ip-gate                 route -n    后获取到的 例   194.87.xxx.xxx
+
 –ip-mask                 255.255.xxx.xx
 复制代码
 
@@ -88,9 +101,14 @@ https://ghproxy.com/https://raw.githubusercontent.com/flyqie/dd-shell/master/Cor
 
 
 宝塔面板&AApanel
+
+
 一键命令
+
 国外VPS
 wget https://raw.githubusercontent.com/AaronYES/aaPanel/main/script/aapanel.sh  -O aapanel.sh && chmod +x aapanel.sh && clear && ./aapanel.sh
+
+
 国内VPS
 wget https://ghproxy.com/https://raw.githubusercontent.com/AaronYES/aaPanel/main/script/aapanel.sh  -O aapanel.sh && chmod +x aapanel.sh && cle
 Debian系统
