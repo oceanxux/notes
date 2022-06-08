@@ -69,13 +69,17 @@ mirrors.ustc.edu.cn       
 
 清华源
 --mirror 'https://mirrors.ustc.edu.cn/debian/'
+
 腾讯源
 --mirror 'http://mirrors.tencent.com/debian/'
 --mirror 'http://mirrors.cloud.tencent.com/debian/'
+
 腾讯源内网（dd完毕后可以修改 走内网不费额外流量）
 http://mirrors.tencentyun.com/
+
 阿里源
 --mirror 'https://mirrors.aliyun.com/debian/'
+
 华为源
 --mirror 'https://mirrors.huaweicloud.com/debian/'
 
@@ -103,14 +107,15 @@ https://ghproxy.com/https://raw.githubusercontent.com/flyqie/dd-shell/master/Cor
 宝塔面板&AApanel
 
 
-一键命令
+一键破解宝塔
 
 国外VPS
 wget https://raw.githubusercontent.com/AaronYES/aaPanel/main/script/aapanel.sh  -O aapanel.sh && chmod +x aapanel.sh && clear && ./aapanel.sh
 
 
 国内VPS
-wget https://ghproxy.com/https://raw.githubusercontent.com/AaronYES/aaPanel/main/script/aapanel.sh  -O aapanel.sh && chmod +x aapanel.sh && cle
+wget https://ghproxy.com/https://raw.githubusercontent.com/AaronYES/aaPanel/main/script/aapanel.sh  -O aapanel.sh && chmod +x aapanel.sh && clear && ./aapanel.sh
+
 Debian系统
 
 # 宝塔
