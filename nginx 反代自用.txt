@@ -1,0 +1,59 @@
+nginx 反代
+
+1：  apt install -y nginx
+2：  修改/etc/nginx/nginx.conf 这个配置文件
+3;  
+user www-data;
+worker_processes auto;
+pid /run/nginx.pid;
+include /etc/nginx/modules-enabled/*.conf;
+events {
+        worker_connections 768;
+        # multi_accept on;
+}
+http {
+        sendfile on;
+        tcp_nopush on;
+        tcp_nodelay on;
+        keepalive_timeout 65;
+        types_hash_max_size 2048;
+        include /etc/nginx/mime.types;
+        access_log /var/log/nginx/access.log;
+        error_log /var/log/nginx/error.log;
+        gzip on;
+    server {
+        listen       80 ;
+        listen [::]:80;
+        server_name  prometheus.hk.hyhy01.com;##域名
+        location / {
+            proxy_pass http://127.0.0.1:3000;## 后面为自己的端口
+       }
+    }
+}
+
+4:  systemctl restart nginx
+
+5： nezha 配置
+
+    server {
+        listen       80 ;
+        listen [::]:80;
+        server_name  oceans.eu.org;
+        location / {
+          proxy_pass http://127.0.0.1:8008;
+          proxy_set_header Host $host;
+          proxy_set_header      Upgrade $http_upgrade;
+        }
+        location ~ ^/(ws|terminal/.+)$  {
+          proxy_pass http://127.0.0.1:8008;
+          proxy_http_version 1.1;
+          proxy_set_header Upgrade $http_upgrade;
+          proxy_set_header Connection "Upgrade";
+          proxy_set_header Host $host;
+        }
+    }
+}
+ 
+
+
+

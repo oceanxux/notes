@@ -1,0 +1,50 @@
+新建实例：
+linode-cli linodes create --label 自定义ID --image 系统 --type CPU核数 --root_pass 密码 --region 地区
+列：
+linode-cli linodes create --label samuel --image linode/debian10 --type g6-standard-1 --root_pass 973421Zx --region eu-central
+
+德国：eu-central
+
+更改CPU核数
+linode-cli linodes resize --type g6-standard-8  36550639
+                                     cpu 核数    ID
+储存块：
+linode-cli volumes create --label 自定义ID --linode_id 服务器ID
+列：
+linode-cli volumes create --label xunge2 --linode_id 36550639
+
+查看磁盘分配情况：linode-cli volumes list
+
+列出 Linode：    linode-cli linodes list
+
+
+调整磁盘大小命令：linode-cli volumes resize $volume_id --size 大小
+
+列：
+linode-cli volumes resize 349601 --size 2048
+                           ID            大小
+
+查看余额使用情况：   linode-cli account view
+
+      删除服务器：  linode-cli linodes delete 服务器ID
+
+    查看所有命令：  linode-cli linodes
+     
+    新的机子token重置:   linode-cli configure
+     按三次
+附加卷： linode-cli volumes attach $volume_id --linode_id $linode_id
+                                    卷名	                    服务器ID
+                                    
+服务器重启: linode-cli linodes reboot 12345 
+
+服务器重建：linode-cli linodes rebuild 36634169 --image linode/debian10 --root_pass 973421Zx 
+
+删除卷命令： linode-cli volumes delete  服务器ID
+ 
+分离命令： linode-cli volumes detach   服务器ID 
+
+ 
+官方命令;
+https://www.linode.com/docs/products/tools/cli/guides/block-storage-volumes/
+
+
