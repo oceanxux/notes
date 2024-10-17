@@ -1,10 +1,5 @@
 # Dream
-适配 V2Board v1.7.4/其他版本自测 版本的前端主题
-
-# 介绍
-本主题由@geekui分享  
-分享人TG：https://t.me/geekui  
-TG频道：https://t.me/V2boradUI  
+适配 V2Board v1.7.4/其他版本自测
 
 # 安装
 下载到theme目录过后要修改当前文件夹名为Dream，然后在后台选择主题 【Dream】 就行了
