@@ -1,5 +1,5 @@
 # Dream
-适配 V2Board v1.7.4/其他版本自测
+仅适配 V2Board
 
 # 安装
 下载到theme目录过后要修改当前文件夹名为Dream，然后在后台选择主题 【Dream】 就行了
