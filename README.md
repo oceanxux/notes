@@ -23,3 +23,8 @@
 - [x] 易支付对接
 - [x] 客服功能
 - [x] 根据下单数量，判断发送格式（纯文本，xlsx, txt）
+
+
+---
+
+- [文档](https://github.com/liy-admin/dujiaoka-tgBot/wiki/%E5%AE%9D%E5%A1%94-%E2%80%90-%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B)
