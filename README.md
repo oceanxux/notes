@@ -14,7 +14,7 @@
 
 - Java (1.8 或者 17)环境
 - 提前配置好`config.properties`文件里面数据库（注意是填独角的数据库）
-- 进人独角数据库插入`bot.sql`文件
+- 进人独角数据库插入`bot.sql`文件，[点击下载文件](https://github.com/admin8800/dujiaokabot/releases/download/bot618/bot.sql)
 
 ## 目前功能
 - [x] 机器人自定义内网穿透
