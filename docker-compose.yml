@@ -1,0 +1,12 @@
+services:
+  dujiaolabot:
+    build: .
+    volumes:
+      - ./config.properties:/app/config.properties
+    environment:
+      TZ: Asia/Shanghai
+    ports:
+      - "8443:8443"
+    restart: always
+
+# 如果独角的数据库运行在宿主机则需要使用host网络模式
